@@ -34,17 +34,100 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => HomePageWidget(),
+      errorBuilder: (context, state) => InicioWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomePageWidget(),
+          builder: (context, _) => InicioWidget(),
         ),
         FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => HomePageWidget(),
+          name: ListarAlumnosWidget.routeName,
+          path: ListarAlumnosWidget.routePath,
+          builder: (context, params) => ListarAlumnosWidget(),
+        ),
+        FFRoute(
+          name: AgregarAlumnoWidget.routeName,
+          path: AgregarAlumnoWidget.routePath,
+          builder: (context, params) => AgregarAlumnoWidget(),
+        ),
+        FFRoute(
+          name: ModificarAlumnoWidget.routeName,
+          path: ModificarAlumnoWidget.routePath,
+          builder: (context, params) => ModificarAlumnoWidget(
+            id: params.getParam(
+              'id',
+              ParamType.int,
+            ),
+            nombre: params.getParam(
+              'nombre',
+              ParamType.String,
+            ),
+            apellidos: params.getParam(
+              'apellidos',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: InicioWidget.routeName,
+          path: InicioWidget.routePath,
+          builder: (context, params) => InicioWidget(),
+        ),
+        FFRoute(
+          name: ListarAsignaturasWidget.routeName,
+          path: ListarAsignaturasWidget.routePath,
+          builder: (context, params) => ListarAsignaturasWidget(),
+        ),
+        FFRoute(
+          name: AgregarAsignaturaWidget.routeName,
+          path: AgregarAsignaturaWidget.routePath,
+          builder: (context, params) => AgregarAsignaturaWidget(
+            id: params.getParam(
+              'id',
+              ParamType.int,
+            ),
+            nombre: params.getParam(
+              'nombre',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: ModificarAsignaturaWidget.routeName,
+          path: ModificarAsignaturaWidget.routePath,
+          builder: (context, params) => ModificarAsignaturaWidget(
+            id: params.getParam(
+              'id',
+              ParamType.int,
+            ),
+            nombre: params.getParam(
+              'nombre',
+              ParamType.String,
+            ),
+            apellidos: params.getParam(
+              'apellidos',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: AsignaturasAlumnoWidget.routeName,
+          path: AsignaturasAlumnoWidget.routePath,
+          builder: (context, params) => AsignaturasAlumnoWidget(
+            id: params.getParam(
+              'id',
+              ParamType.int,
+            ),
+            nombre: params.getParam(
+              'nombre',
+              ParamType.String,
+            ),
+            apellidos: params.getParam(
+              'apellidos',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
