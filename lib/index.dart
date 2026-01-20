@@ -14,3 +14,5 @@ export '/pages/modificar_asignatura/modificar_asignatura_widget.dart'
     show ModificarAsignaturaWidget;
 export '/pages/asignaturas_alumno/asignaturas_alumno_widget.dart'
     show AsignaturasAlumnoWidget;
+export '/agregar_asignatura_alumno/agregar_asignatura_alumno_widget.dart'
+    show AgregarAsignaturaAlumnoWidget;

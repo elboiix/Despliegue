@@ -128,6 +128,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: AgregarAsignaturaAlumnoWidget.routeName,
+          path: AgregarAsignaturaAlumnoWidget.routePath,
+          builder: (context, params) => AgregarAsignaturaAlumnoWidget(
+            id: params.getParam(
+              'id',
+              ParamType.int,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

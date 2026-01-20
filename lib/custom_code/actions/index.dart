@@ -6,3 +6,4 @@ export 'listar_asignaturas.dart' show listarAsignaturas;
 export 'eliminar_asignatura.dart' show eliminarAsignatura;
 export 'agregar_asignatura.dart' show agregarAsignatura;
 export 'actualizar_asignatura.dart' show actualizarAsignatura;
+export 'agregar_asignatura_alumno.dart' show agregarAsignaturaAlumno;

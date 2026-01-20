@@ -4,10 +4,21 @@ import 'asignaturas_alumno_widget.dart' show AsignaturasAlumnoWidget;
 import 'package:flutter/material.dart';
 
 class AsignaturasAlumnoModel extends FlutterFlowModel<AsignaturasAlumnoWidget> {
-  ///  State fields for stateful widgets in this page.
+  ///  Local state fields for this page.
 
-  // Stores action output result for [Custom Action - listarAlumnos] action in Icon widget.
-  List<dynamic>? alumnosListadosBorrar;
+  List<dynamic> listaAsignaturasDelAlumno = [];
+  void addToListaAsignaturasDelAlumno(dynamic item) =>
+      listaAsignaturasDelAlumno.add(item);
+  void removeFromListaAsignaturasDelAlumno(dynamic item) =>
+      listaAsignaturasDelAlumno.remove(item);
+  void removeAtIndexFromListaAsignaturasDelAlumno(int index) =>
+      listaAsignaturasDelAlumno.removeAt(index);
+  void insertAtIndexInListaAsignaturasDelAlumno(int index, dynamic item) =>
+      listaAsignaturasDelAlumno.insert(index, item);
+  void updateListaAsignaturasDelAlumnoAtIndex(
+          int index, Function(dynamic) updateFn) =>
+      listaAsignaturasDelAlumno[index] =
+          updateFn(listaAsignaturasDelAlumno[index]);
 
   @override
   void initState(BuildContext context) {}
