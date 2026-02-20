@@ -1,4 +1,4 @@
-name: Build Flutter Android APK and Deploy
+ixname: Build Flutter Android APK and Deploy
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
 
     - name: Deploy APK to Android repository
       run: |
-        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Manuel-dam/despliegueAndroid.git android-repo
+        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/elboiix/movil.git android-repo
         rm -rf android-repo/*
         cp build/app/outputs/flutter-apk/app-release.apk android-repo/
         cd android-repo
