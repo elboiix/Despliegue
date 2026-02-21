@@ -31,13 +31,13 @@ jobs:
       run: flutter build apk --release
 
     - name: Deploy APK to Android repository
-      run: |
-        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/elboiix/movil.git android-repo
-        rm -rf android-repo/*
-        cp build/app/outputs/flutter-apk/app-release.apk android-repo/
-        cd android-repo
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Deploy Android APK"
-        git push
+        run: |
+          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/elboiix/movil.git android-repo
+          rm -rf android-repo/*
+          cp build/app/outputs/flutter-apk/app-release.apk android-repo/
+          cd android-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy Android APK" || echo "No hay cambios nuevos que subir"
+          git push || echo "Nada que pushear"
