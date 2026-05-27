@@ -336,7 +336,7 @@ class _AgregarAlumnoWidgetState extends State<AgregarAlumnoWidget> {
                                 16.0, 0.0, 16.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xF2383737),
+                            color: Color(0xE6383737),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
