@@ -463,7 +463,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(AgregarAlumnoWidget.routeName);
