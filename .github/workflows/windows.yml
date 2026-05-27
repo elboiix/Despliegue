@@ -16,7 +16,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          channel: '3.38.5'
           cache: true
 
       - name: Enable Windows desktop + install deps
